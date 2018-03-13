@@ -15,11 +15,15 @@
 # limitations under the License.
 #
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AICP stuff.
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common devices stuff.
 $(call inherit-product, device/samsung/kltekdi/full_kltekdi.mk)
 
 PRODUCT_DEVICE := kltekdi
-PRODUCT_NAME := lineage_kltekdi
+PRODUCT_NAME := aicp_kltekdi
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+	DEVICE_MAINTAINERS="lindwurm"
